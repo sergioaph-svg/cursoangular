@@ -1,12 +1,23 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Calendar } from './calendar/calendar';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  standalone: true,
+  imports: [Calendar],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
-  protected readonly title = signal('my-app');
+  name = 'Peter Parker, Spider-Man';
+  data: number[] = [];
+
+  getuser() {
+    return undefined;
+  }
+
+  handlerClick(ev: Event) {
+    ev.stopPropagation();
+    this.data.push(this.data.length + 1);
+  }
 }

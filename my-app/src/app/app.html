@@ -1,0 +1,18 @@
+<div>{{name}}</div>
+
+@if(getuser()){
+  <div>{{getuser()}}</div>
+}@else{
+  <button>Login</button>
+}
+
+<button (click)="handlerClick($event)">Add item</button>
+
+@for (item of data; track item){
+  <div>{{item}}</div>
+}@empty{
+  <div>No existen elementos</div>
+}
+
+<!-- calendario -->
+<app-calendar></app-calendar>

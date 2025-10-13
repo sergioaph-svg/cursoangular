@@ -1,0 +1,25 @@
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.day {
+  background: #f3f3f3;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.day:hover {
+  background: #007acc;
+  color: white;
+}
+
+.selected p {
+  margin: 2px 0;
+}

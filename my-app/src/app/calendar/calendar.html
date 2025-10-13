@@ -1,0 +1,17 @@
+<div class="days-grid">
+  @for(day of days; track day){
+    <div class="day" (click)="clickDay(day)">
+      {{ day }}
+    </div>
+  }
+</div>
+
+<div class="selected">
+  @if(selectedDays.length > 0){
+    @for(d of selectedDays; track d){
+      <p>Has pulsado: {{ d }}</p>
+    }
+  }@else{
+    <p>No has pulsado ningún día</p>
+  }
+</div>
