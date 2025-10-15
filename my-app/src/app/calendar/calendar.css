@@ -23,3 +23,8 @@
 .selected p {
   margin: 2px 0;
 }
+
+.day.active {
+  background: #007acc;
+  color: white;
+}

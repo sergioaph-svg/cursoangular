@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
+import { counterSignal } from '../counter/counter.store';
 
 @Component({
   selector: 'app-calendar',
-  standalone: true,
+  imports: [],
   templateUrl: './calendar.html',
-  styleUrls: ['./calendar.css']
+  styleUrl: './calendar.css'
 })
 export class Calendar {
   days = Array.from({ length: 31 }, (_, i) => i + 1);
-
-  selectedDays: number[] = [];
-
+  selectedDay = counterSignal; // la señal del contador
   clickDay(day: number) {
-    this.selectedDays.push(day);
+    counterSignal.set(day);
   }
 }
