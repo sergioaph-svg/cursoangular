@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Calendar } from './calendar/calendar';
 import { Counter } from './counter/counter';
 import { Clock } from './clock/clock';
+import { Pizzalist } from './pizzas/pizzalist/pizzalist';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Calendar, Counter, Clock],
+  imports: [Pizzalist, Calendar, Counter, Clock],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
