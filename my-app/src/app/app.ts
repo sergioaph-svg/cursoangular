@@ -3,11 +3,12 @@ import { Calendar } from './calendar/calendar';
 import { Counter } from './counter/counter';
 import { Clock } from './clock/clock';
 import { Pizzalist } from './pizzas/pizzalist/pizzalist';
+import { Carrito } from './pizzas/carrito/carrito';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Pizzalist, Calendar, Counter, Clock],
+  imports: [Pizzalist, Calendar, Carrito, Counter, Clock],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
